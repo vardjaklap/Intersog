@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #f6f6f6;
+}
+
+.headline{
+    height: 50px;
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 15px;
+    background-color: #fcfcfc;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+
+}
+
+.cardDash{
+    display: inline-block;
+  height: 255px;
+  width: 23%;
+}
+.block{
+    width: 44%;
+    display: inline-block;
+}
+.blocks{
+    height: 125px;
+  display: flex;
+  flex-wrap: wrap;
+    justify-content: space-evenly;
+  padding-top: 5px;
+  padding-left: 15px;
+    padding-bottom: 0;
+}
+/*.topCard{*/
+    /*border-bottom: 1px grey solid;*/
+    /*padding-bottom: 10px;*/
+/*}*/
+.Challenge{
+    border-top: 5px purple solid;
+}
+.Influencer{
+    border-top: 5px #6e3cd1 solid;
+}
+.Giveaway{
+    border-top: 5px #3f4680 solid;
+}
+md-card-title-text span{
+    margin-left: 15px;
+}
+md-card-actions{
+    margin: 0;
+}
+.cardBot{
+    margin: 0;
+    height: 10px;
+    padding: 2px;
+}
+.moreBut{
+    color: #5152ff;
+}
+.showMore{
+    height: 250px;
+    width: 20%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: dimgrey;
+    opacity: 1;
+}
+
+.topLine{
+    width: 100%;
+    height: 4px;
+    background-color: rebeccapurple;
+}
+.midLine{
+    width: 100%;
+    height: 4px;
+    background-color: #43c8bb;
+}
+.blackLine{
+    width: 100%;
+    height: 1px;
+    background-color: darkgrey;
+}
+.hline{
+    padding-left: 15px;
+}
+.hline span{
+    display: block;
+}
+.cardCont{
+    padding: 0;
+}
+.subh{
+    position: relative;
+    top:-5px;
+    color: dimgrey;
+    margin-bottom: 5px;
+    font-size:14px;
+}
+.statName{
+    color: dimgrey;
+    font-size:11px;
+    margin: 0;
+}
+.number{
+    font-size: 20px;
+}
+p{
+    margin: 0;
+    font-size: 10px;
+    color: dimgrey;
+}
+.moreToShow{
+ font-size: 20px;
+}
+.plus{
+    font-size: 30px;
+}
+.baseCards{
+    display: flex;
+    flex-wrap: wrap;
+}
+.butInvisible{
+    opacity: 0;
+}
+.headline a{
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+.nameDet{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    margin-top: 10px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+.nameDet h3{
+    margin-left: 5px;
+    line-height: 50px;
+}
+.mainSection{
+    background-color: #fff;
+    margin-top: 10px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+.social{
+    width: 100%;
+    height: 70px;
+    padding-left: 10px;
+}
+.filter{
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    outline: none;
+}
+.filterSec{
+    height: 40px;
+    margin: 15px 0;
+    /*background-color: blue;*/
+}
+.filterBut{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 25px;
+    background-color: dodgerblue;
+}
+.chips{
+    /*width: 1100px;*/
+    margin: 0;
+}
+.items{
+    height: 40px;
+}
+.items span{
+    line-height: 100%;
+}
+.socialMedia{
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    margin-top: 15px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.pageButton{
+    float: right;
+    margin-right: 15px;
+}
+.cardDet {
+    display: inline-block;
+    width: 23.5%;
+}
+.hlineDet img{
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50% ;
+}
+.info{
+    margin: 10px;
+    width: 170px;
+    display: inline-block;
+}
+.hlineDet{
+    display: flex;
+}
+.subDet{
+    position: relative;
+    font-size: 14px;
+    top: -5px;
+    color: dimgrey;
+    display: block;
+}
+.postPic{
+    width: 100%;
+    height: 260px;
+}
+.blocksDet{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+}
+.username{
+    font-size: 20px;
+}
+
+.overlayPic{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    background-color: rgba(200, 202, 203, 0.58);
+}
+.overlayVisible{
+    opacity: 0;
+}
+.pic{
+    position: relative;
+    width: 100%;
+}
+.ng-hide{
+    opacity: 0;
+    transition: all 0.4s;
+}
+.text p{
+    height: 300px;
+    color: whitesmoke;
+}

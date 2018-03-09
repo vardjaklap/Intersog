@@ -1,0 +1,161 @@
+<div class="wrapper">
+  <div class="headline">
+    <div class="container">
+      <h3 class="headName md-headline"><a href="#!/dashboard">Dashboard</a></h3>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="nameDet">
+      <h3 class="md-headline">Random name</h3>
+    </div>
+
+    <div class="mainSection">
+      <div class="social">
+        <md-button ng-model="socialNet" class="socialMedia">Instagram</md-button>
+        <md-button  class="socialMedia">Youtube</md-button>
+        <md-button class="socialMedia">Facebook</md-button>
+        <md-button class="socialMedia">Twitter</md-button>
+      </div>
+      <div class="tabs">
+        <md-tabs md-dynamic-height="" md-border-bottom="">
+          <md-tab label="Pending">
+            <md-content>
+              <div class="filterSec">
+                <div class="chips">
+                  <md-chips class="chipInput" ng-model="chipNames"></md-chips>
+                </div>
+                <md-button class="filterBut">Filter</md-button>
+              </div>
+              <div class="items">
+                <span>{{postsShown.length}} Items found</span>
+                <button class="pageButton">Page</button>
+              </div>
+              <div class="baseCards">
+                <md-card class="cardDet" ng-if="postsShown.length > 0" ng-repeat="x in postsShown">
+                  <!--<div class="topLine {{x.type}}"></div>-->
+                  <md-card-content class="cardCont">
+                    <div class="hlineDet">
+                      <img ng-src="{{x.author_pic}}" alt="">
+                      <div class="info"><span class="username">{{x.author_username}}</span>
+                        <span class="subDet"><a href="{{x.link}}">{{x.social_network}}</a></span>
+                      </div>
+                    </div>
+                    <div class="pic">
+                      <img ng-mouseenter="showOver = !showOver"  class="postPic" ng-src="{{x.pic}}" alt="">
+                      <div class="overlayPic fade" ng-mouseleave="showOver = !showOver" ng-show="showOver">
+                        <div class="text"><p>{{x.caption}}</p></div>
+                      </div>
+                    </div>
+                    <div class="blocksDet">
+                      <div class="block">
+                        <div class="line">
+                          <h6 class="statName">Likes</h6>
+                          <h4 class="number">{{x.likes_number}}</h4>
+                        </div>
+                      </div>
+                      <div class="block">
+                        <div class="line">
+                          <h6 class="statName">Comments</h6>
+                          <h4 class="number">{{x.comments_number}}</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blackLine"></div>
+                  </md-card-content>
+                  <md-button ng-click="postRejected(x, $index)" class="btn1 hideBut">Reject</md-button>
+                  <md-button ng-click="postApproved(x, $index)" class="btn1 moreBut">Approve</md-button>
+
+                </md-card>
+              </div>
+            </md-content>
+          </md-tab>
+          <md-tab label="Approved">
+            <md-content class="md-padding">
+              <div class="baseCards">
+                <md-card class="cardDet" ng-repeat="x in postsApproved">
+                  <!--<div class="topLine {{x.type}}"></div>-->
+                  <md-card-content class="cardCont">
+                    <div class="hlineDet">
+                      <img ng-src="{{x.author_pic}}" alt="">
+                      <div class="info"><span class="username">{{x.author_username}}</span>
+                        <span class="subDet"><a href="{{x.link}}">{{x.social_network}}</a></span>
+                      </div>
+                    </div>
+                    <div class="pic">
+                      <img ng-mouseenter="showOver = !showOver"  class="postPic" ng-src="{{x.pic}}" alt="">
+                      <div class="overlayPic fade" ng-mouseleave="showOver = !showOver" ng-show="showOver">
+                        <div class="text"><p>{{x.caption}}</p></div>
+                      </div>
+                    </div>
+                    <div class="blocksDet">
+                      <div class="block">
+                        <div class="line">
+                          <h6 class="statName">Likes</h6>
+                          <h4 class="number">{{x.likes_number}}</h4>
+                        </div>
+                      </div>
+                      <div class="block">
+                        <div class="line">
+                          <h6 class="statName">Comments</h6>
+                          <h4 class="number">{{x.comments_number}}</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blackLine"></div>
+                  </md-card-content>
+                  <md-button ng-click="postReject(x, $index)" class="btn1 hideBut">Reject</md-button>
+
+
+                </md-card>
+              </div>
+            </md-content>
+          </md-tab>
+          <md-tab label="Rejected">
+            <md-content class="md-padding">
+              <div class="baseCards">
+                <md-card class="cardDet" ng-repeat="x in postsRejected">
+                  <!--<div class="topLine {{x.type}}"></div>-->
+                  <md-card-content class="cardCont">
+                    <div class="hlineDet">
+                      <img ng-src="{{x.author_pic}}" alt="">
+                      <div class="info"><span class="username">{{x.author_username}}</span>
+                        <span class="subDet"><a href="{{x.link}}">{{x.social_network}}</a></span>
+                      </div>
+                    </div>
+                    <div class="pic">
+                      <img ng-mouseenter="showOver = !showOver"  class="postPic" ng-src="{{x.pic}}" alt="">
+                      <div class="overlayPic fade" ng-mouseleave="showOver = !showOver" ng-show="showOver">
+                        <div class="text"><p>{{x.caption}}</p></div>
+                      </div>
+                    </div>
+                    <div class="blocksDet">
+                      <div class="block">
+                        <div class="line">
+                          <h6 class="statName">Likes</h6>
+                          <h4 class="number">{{x.likes_number}}</h4>
+                        </div>
+                      </div>
+                      <div class="block">
+                        <div class="line">
+                          <h6 class="statName">Comments</h6>
+                          <h4 class="number">{{x.comments_number}}</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blackLine"></div>
+                  </md-card-content>
+                  <md-button ng-click="postApprove(x, $index)" class="btn1 moreBut">Approve</md-button>
+
+
+                </md-card>
+              </div>
+            </md-content>
+          </md-tab>
+        </md-tabs>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="wrapper">
+    <div class="headline">
+        <div class="container">
+        <h3 class="headName md-headline"><a href="#!/dashboard">Dashboard</a></h3>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="baseCards">
+            <md-card class="cardDash" ng-repeat="x in cardsShown">
+                <div class="topLine {{x.type}}"></div>
+                <md-card-content class="cardCont">
+                    <div class="hline">
+                        <span class="md-headline">Random name {{x.id}}</span>
+                        <span class="subh">{{x.type}}</span>
+                    </div>
+                    <div class="blackLine"></div>
+                    <div class="blocks">
+                        <div class="block">
+                            <div class="line">
+                                <h6 class="statName">Approved</h6>
+                                <h4 class="number">{{x.approved_posts}}</h4>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="line">
+                                <h6 class="statName">Influencers</h6>
+                                <h4 class="number">{{x.num_of_artists}}</h4>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="line">
+                                <h6 class="statName">Likes</h6>
+                                <h4 class="number">{{x.approved_likes}}</h4>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="line">
+                                <h6 class="statName">Comments</h6>
+                                <h4 class="number">{{x.approved_comments}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dates">
+                        <p>{{x.progress}}% ({{x.days_passed}}/{{x.days_total}} days)</p>
+                    </div>
+                </md-card-content>
+                <div class="midLine"></div>
+                <md-button ng-click="hideCard(x, $index)" class="btn1 hideBut">Hide</md-button>
+                <md-button class="btn1 moreBut" href="#!/view2">Show details</md-button>
+
+            </md-card>
+            <md-button ng-click="addCards()" ng-class="{butInvisible: butHidden}" class="showMore" id="ButShow">
+            <p class="plus">+{{cardsHidden.length}}</p>
+            <p class="moreToShow">MORE TO SHOW</p>
+            </md-button>
+
+        </div>
+    </div>
+</div>
